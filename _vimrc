@@ -78,6 +78,7 @@ Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'powerline/powerline'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/neocomplcache'
+Bundle 'scrooloose/syntastic'
 call vundle#end()
 filetype plugin indent on    " required
 " 以下为要安装或更新的插件，不同仓库都有（具体书写规范请参考帮助）
@@ -238,3 +239,15 @@ let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+
+
+
+"-----------set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+"-------------syntastic  seting----------
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
