@@ -68,7 +68,6 @@ set rtp+=$VIM/vimfiles/bundle/Vundle.vim/
 let path='$VIM/vimfiles/bundle' 
 call vundle#begin(path)
 Bundle 'gmarik/Vundle.vim'
-Bundle 'python_fold_compact'
 Bundle 'a.vim'
 Bundle 'vimplugin/project.vim'
 Bundle 'jmcomets/vim-pony'
@@ -79,6 +78,7 @@ Bundle 'powerline/powerline'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/neocomplcache'
 Bundle 'scrooloose/syntastic'
+Bundle 'klen/python-mode'
 call vundle#end()
 filetype plugin indent on    " required
 " 以下为要安装或更新的插件，不同仓库都有（具体书写规范请参考帮助）
@@ -95,7 +95,7 @@ set nowrap                                            "设置不自动换行
 set shortmess=atI                                     "去掉欢迎界面
 " au GUIEnter * simalt ~x                           "窗口启动时自动最大化
 winpos 100 10                                     "指定窗口出现的位置，坐标原点在屏幕左上角
-set lines=38 columns=120                          "指定窗口大小，lines为高度，columns为宽度
+set lines=32 columns=110                         "指定窗口大小，lines为高度，columns为宽度
 colorscheme slate
 set guioptions-=m
 set guioptions-=T
@@ -104,7 +104,7 @@ set guioptions-=
 syntax enable
 syntax on
 "----------TagBar-------设置
-nmap <F8> :TagbarToggle<CR>
+nmap <F9> :TagbarToggle<CR>
 "指定配色方案为
 colorscheme Tomorrow-Night-Eighties
 
@@ -251,3 +251,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+"-------------------the-nerd_tree---setting---------
+map <silent><F3> <ESC>:NERDTreeToggle<CR>
